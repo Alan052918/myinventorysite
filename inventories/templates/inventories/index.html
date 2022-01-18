@@ -1,0 +1,11 @@
+{% if recently_updated_good_list %}
+<ul>
+  {% for good in recently_updated_good_list %}
+  <li>
+    <a href="/inventories/{{ good.id }}/">{{ good.description_text }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No goods are available.</p>
+{% endif %}
